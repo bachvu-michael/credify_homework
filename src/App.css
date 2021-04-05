@@ -1,38 +1,251 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: Oswald;
+  src: url(font/Oswald-Light.ttf);
+  font-weight: 300;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: Oswald;
+  src: url(font/Oswald-Regular.ttf);
+  font-weight: normal;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: Roboto Slab;
+  src: url(font/RobotoSlab-Regular.ttf);
+  font-weight: normal;
 }
-
-.App-header {
-  background-color: #282c34;
+@font-face {
+  font-family: Roboto Slab;
+  src: url(font/RobotoSlab-Bold.ttf);
+  font-weight: bold;
+}
+body {
+  font-family: Roboto Slab !important;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+ul,
+li {
+  font-family: Oswald !important;
+  color: #333333 !important;
+}
+h4 {
+  font-size: 16px !important;
+}
+p {
+  font-size: 14px;
+}
+.wapper-body {
+  background-image: url('image/BG.png');
   min-height: 100vh;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-color: #F6F8FF;
+  background-attachment: fixed;
+}
+.wapper-body .body {
+  padding: 50px 45px;
+  position: relative;
+}
+.wapper-body .body .left-bar-menu {
+  position: absolute;
+}
+.wapper-body .body .left-bar-menu ul {
+  margin-top: 100px;
+  list-style: none;
+}
+.wapper-body .body .left-bar-menu ul li {
+  margin-bottom: 40px;
+}
+.wapper-body .body .left-bar-menu ul li a {
+  color: #333333;
+  text-decoration: none;
   display: flex;
-  flex-direction: column;
   align-items: center;
+}
+.wapper-body .body .left-bar-menu ul li a span {
+  font-size: 20px;
+}
+.wapper-body .body .left-bar-menu ul li a img {
+  margin-right: 15px;
+}
+.wapper-body .body .left-bar-menu ul li a:hover,
+.wapper-body .body .left-bar-menu ul li a.active {
+  background: -webkit-linear-gradient(90deg, #AB2185 0%, #5A24B3 79.67%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.wapper-body .body .content {
+  margin-left: 250px;
+  background-color: white;
+  width: 1065px;
+  min-height: calc(100vh - 60px);
+  border-radius: 20px;
+  background-image: url('image/bot_img.png');
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  padding: 45px 40px 250px 40px;
+  box-shadow: 0px 2px 15px 2px rgba(169, 169, 169, 0.15);
+}
+.wapper-body .body .content .title-content {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.wapper-body .body .content .title-content h1 {
+  font-size: 30px;
+}
+.wapper-body .body .content .card {
+  box-shadow: 0px 2px 15px 2px rgba(169, 169, 169, 0.15);
+  border: none;
+  border-radius: 20px;
+}
+.wapper-body .body .content .card .header-card {
+  padding: 20px 20px 10px 20px;
+  border-bottom: 1px solid #F1F1F1;
+  display: flex;
+  justify-content: space-between;
+}
+.wapper-body .body .content .card .header-card .title-card {
+  font-size: 16px;
+}
+.wapper-body .body .content .card .body-card {
+  padding: 20px;
+}
+.wapper-body .body .content .card .body-card .info-card {
+  background-color: #DDEBFF;
+  border-radius: 20px;
+  padding: 20px;
+  position: relative;
+  margin-bottom: 25px;
+}
+.wapper-body .body .content .card .body-card .info-card .info-num {
+  font-size: 40px;
+  font-family: Oswald;
+  color: #2F80ED;
+  font-weight: 400;
+}
+.wapper-body .body .content .card .body-card .info-card .info-des {
+  font-size: 14px;
+}
+.wapper-body .body .content .card .body-card .info-card .info-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.wapper-body .body .content .card .body-card .info-card.blue {
+  background-color: #DDEBFF;
+}
+.wapper-body .body .content .card .body-card .info-card.blue .info-num {
+  color: #2F80ED;
+}
+.wapper-body .body .content .card .body-card .info-card.red {
+  background-color: #FFE1F3;
+}
+.wapper-body .body .content .card .body-card .info-card.red .info-num {
+  color: #D63595;
+}
+.wapper-body .body .content .card .body-card .info-card.purple {
+  background-color: #F0E9F9;
+}
+.wapper-body .body .content .card .body-card .info-card.purple .info-num {
+  color: #9147D7;
+}
+.pie-chart-middle {
+  font-size: 40px;
+  font-family: Oswald;
+}
+.pie-chart-middle-des {
+  font-family: Roboto Slab;
+  font-size: 15px;
+  color: #333 !important;
+}
+.table-dashboard {
+  font-size: 15px;
+  font-family: Roboto Slab;
+  width: 100%;
+}
+.table-dashboard thead tr th {
+  color: #999;
+  padding: 10px 0;
+}
+.table-dashboard tbody tr td {
+  color: #333;
+  padding: 10px 0;
+  font-weight: bold;
+  font-family: Roboto Slab;
+}
+.next-prev {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.next-prev a {
+  margin-right: 10px;
+  padding: 4px 11px;
+  background-color: #F1F1F1;
+  border-radius: 22px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.basic-single .select__control {
+  border-radius: 10px;
+}
+.basic-single .select__control .select__single-value {
+  font-family: Roboto Slab;
+  font-size: 14px;
+}
+@media only screen and (max-width: 1750px) {
+  .wapper-body {
+    background-position: 100px 0;
   }
-  to {
-    transform: rotate(360deg);
+}
+@media only screen and (max-width: 1375px) {
+  .wapper-body {
+    background-position: 100px 0;
+  }
+  .wapper-body .body .content {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 1375px) {
+  .wapper-body {
+    background-position: -200px 0;
+  }
+  .wapper-body .body .content {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .wapper-body .body .content {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .wapper-body .body .left-bar-menu ul li span {
+    display: none;
+  }
+  .wapper-body .body .content {
+    width: 80%;
+    margin-left: 160px;
+    margin-top: 55px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .wapper-body .body {
+    padding: 30px 10px;
+  }
+  .wapper-body .body .left-bar-menu ul {
+    display: none;
+  }
+  .wapper-body .body .left-bar-menu ul li span {
+    display: none;
+  }
+  .wapper-body .body .content {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 55px;
+  }
+  .wapper-body .body .content .title-content {
+    flex-direction: column;
   }
 }
